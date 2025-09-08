@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-selector {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.theme-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-btn:hover {
+  transform: translateY(-3px);
+}
+
+.theme-btn.active {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.theme-classic {
+  background: #ff6b6b;
+  color: white;
+}
+
+.theme-naruto {
+  background: #ffaa00;
+  color: white;
+}
+
+.theme-dragonball {
+  background: #ff3e3e;
+  color: white;
+}
+
+.theme-pokemon {
+  background: #3b4cca;
+  color: white;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.score {
+  text-align: center;
+}
+
+.score h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.player1-score {
+  color: #e74c3c;
+}
+
+.player2-score {
+  color: #3498db;
+}
+
+.draw-score {
+  color: #7f8c8d;
+}
+
+.status {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #ecf0f1;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center; /* Centraliza o board horizontalmente */
+  /* margin: 2rem 0; */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cell:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05);
+}
+
+.controls {
+  margin: 1.5rem 0;
+}
+
+button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+}
+
+#reset-score-btn {
+  background: #e74c3c;
+}
+
+#reset-score-btn:hover {
+  background: #c0392b;
+}
+
+.result {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.winning-cell {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 500px) {
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .theme-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .theme-btn {
+    width: 80%;
+  }
+}

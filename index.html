@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha com Temas</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Jogo da Velha Temático</h1>
+
+      <div class="theme-selector">
+        <h3>Escolha seu tema:</h3>
+        <div class="theme-buttons">
+          <button class="theme-btn theme-classic active" data-theme="classic">
+            X vs O
+          </button>
+          <button class="theme-btn theme-naruto" data-theme="naruto">
+            Naruto vs Sasuke
+          </button>
+          <button class="theme-btn theme-dragonball" data-theme="dragonball">
+            Goku vs Vegeta
+          </button>
+          <button class="theme-btn theme-pokemon" data-theme="pokemon">
+            Charmander vs Squirtle
+          </button>
+        </div>
+      </div>
+
+      <div class="score-board">
+        <div class="score">
+          <h3 id="player1-name">Jogador X</h3>
+          <div id="score-x" class="score-value player1-score">0</div>
+        </div>
+        <div class="score">
+          <h3>Empates</h3>
+          <div id="score-draw" class="score-value draw-score">0</div>
+        </div>
+        <div class="score">
+          <h3 id="player2-name">Jogador O</h3>
+          <div id="score-o" class="score-value player2-score">0</div>
+        </div>
+      </div>
+
+      <div class="status">
+        <p id="player-turn">Vez do jogador: X</p>
+      </div>
+      <div class="board-container">
+        <div class="board" id="board">
+          <div class="cell" data-cell-index="0"></div>
+          <div class="cell" data-cell-index="1"></div>
+          <div class="cell" data-cell-index="2"></div>
+          <div class="cell" data-cell-index="3"></div>
+          <div class="cell" data-cell-index="4"></div>
+          <div class="cell" data-cell-index="5"></div>
+          <div class="cell" data-cell-index="6"></div>
+          <div class="cell" data-cell-index="7"></div>
+          <div class="cell" data-cell-index="8"></div>
+        </div>
+      </div>
+      <div class="board-container">
+        <div class="controls">
+          <button id="reset-btn">Novo Jogo</button>
+          <button id="reset-score-btn">Zerar Placar</button>
+        </div>
+      </div>
+
+      <div class="result">
+        <p id="result-message"></p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
