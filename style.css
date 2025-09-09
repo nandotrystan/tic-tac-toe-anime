@@ -134,8 +134,7 @@ h1 {
 
 .board-container {
   display: flex;
-  justify-content: center; /* Centraliza o board horizontalmente */
-  /* margin: 2rem 0; */
+  justify-content: center;
 }
 
 .board {

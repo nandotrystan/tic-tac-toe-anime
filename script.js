@@ -181,7 +181,7 @@ class JogoDaVelha {
         } venceu!`
       );
       // Destaca as células que formaram a combinação vencedora
-      this.highlightWinningCells();
+      this.showWinningCells();
       return;
     }
 
@@ -255,7 +255,7 @@ class JogoDaVelha {
   }
 
   // Destaca visualmente as células que formaram a combinação vencedora
-  highlightWinningCells() {
+  showWinningCells() {
     // Encontra a combinação vencedora
     const winningCombination = this.winningCombinations.find((combination) => {
       return combination.every(
