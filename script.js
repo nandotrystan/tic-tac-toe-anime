@@ -312,11 +312,13 @@ class JogoDaVelha {
     // Atualiza a exibição do placar
     this.updateScoreDisplay();
 
+
     // Mostrar mensagem de confirmação
     const resultMessage = document.getElementById("result-message");
     resultMessage.textContent = "Placar zerado!";
     resultMessage.style.color = "#7f8c8d";
 
+    this.resetGame()
     // Remove a mensagem após 2 segundos
     setTimeout(() => {
       if (resultMessage.textContent === "Placar zerado!") {
