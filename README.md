@@ -1,4 +1,4 @@
-# Jogo da Velha com Temas Personalizados
+# Jogo da Velha[Tic-Tac-Toe] com Temas Personalizados
 Um jogo da velha interativo e estilizado com múltiplos temas baseados em personagens populares de anime e games.
 
 ## 🎮 Funcionalidades
