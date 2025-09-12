@@ -42,20 +42,23 @@ Design tradicional do jogo da velha
 X em vermelho e O em azul
 
 🔶 Naruto vs Sasuke
+```
 Naruto representado pelo símbolo ☯ (laranja)
 
 Sasuke representado pelo símbolo ⚡ (roxo)
-
+```
 ⭐ Goku vs Vegeta
+```
 Goku representado por uma estrela vazia ☆ (vermelho)
 
 Vegeta representado por uma estrela cheia ★ (azul)
-
+```
 🔥 Charmander vs Squirtle
+```
 Charmander representado por emoji de fogo 🔥 (vermelho/laranja)
 
 Squirtle representado por emoji de água 💧 (azul)
-
+```
 ## 🛠️ Tecnologias utilizadas
 HTML5 - Estrutura do jogo
 
